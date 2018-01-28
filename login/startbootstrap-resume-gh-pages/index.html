@@ -9,7 +9,7 @@
     <link href="css/stylish-portfolio.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-	 <!-- Saved stylesheet CSS file -->
+    <!-- Saved stylesheet CSS file -->
     <link rel="stylesheet" type="text/css" href="style/mystyle.css">
 
     <!-- Login screen data -->
@@ -20,22 +20,24 @@
     <link rel="stylesheet" src="../describeyourself/mycss.css">
     <link rel="stylesheet" src="../createsession/mycss.css">
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- ANIMATION SCRIPT -->
-    <script src = "splashAnimate.js"></script>
-    <link rel = "stylesheet" href = "animate.css">
-	 
-	 <style>
-::-webkit-input-placeholder {
-   text-align: center;
-}
-	</style>
+    <script src="splashAnimate.js"></script>
+    <link rel="stylesheet" href="animate.css">
+
+    <style>
+        ::-webkit-input-placeholder {
+            text-align: center;
+        }
+    </style>
 
 </head>
 
@@ -44,83 +46,113 @@
     <header id="top" class="header">
         <div class="text-vertical-center">
 
-		  <br>
-		  <br>
-		  <center><h1 style="color:2B4655">WinkMeUp</h1></center>
-		  <center><img src="img/logo.png" style="width:100px;height:100px;"></center>
-        <center><h2 style="color:black">Wake up to your <b>FRIENDS'</b> favorite rythmn!</h2></center>
-		      <div class="container">
-        <br>
+            <br>
+            <br>
+            <center>
+                <h1 style="color:2B4655">WinkMeUp</h1>
+            </center>
+            <center>
+                <img src="img/logo.png" style="width:100px;height:100px;">
+            </center>
+            <center>
+                <h2 style="color:black">Wake up to your
+                    <b>FRIENDS'</b> favorite rythmn!</h2>
+            </center>
+            <div class="container">
+                <br>
 
-		  <!-- LOGIN FORM STARTS HERE -->
-			<form action="signin.php" method="post" name="myLoginForm" onsubmit="return validate()">
-				<center>
-				<!--<label class="control-label" style="color:1F333E">Username</label>-->
-				
-				<div class="input-group">          
-                <input type="text" name="uname" placeholder="USERNAME" class="form-control" size="30">
-					 <p id="firstalert"  style="color:red;"></p>
+                <!-- LOGIN FORM STARTS HERE -->
+                <form action="signin.php" method="post" name="myLoginForm" onsubmit="return validate()">
+                    <center>
+                        <!--<label class="control-label" style="color:1F333E">Username</label>-->
+
+                        <div class="input-group">
+                            <input type="text" name="uname" placeholder="USERNAME" class="form-control" size="30">
+                            <p id="firstalert" style="color:red;"></p>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="password" name="password" placeholder="PASSWORD" class="form-control" size="30">
+                            <p id="secondalert" style="color:red;"></p>
+                        </div>
+
+                        <br>
+
+                        <center>
+                            <button id="getstarted">Sign in</button>
+                        </center>
+                        <br>
+                </form>
+
+                <!-- SIGN UP FORM STARTS HERE -->
+                <form class="well form-horizontal" action="signup.php" method="post" name="myForm" onsubmit="return validateForm()">
+                    <fieldset>
+                        <!-- Form Name -->
+                        <legend align="center">Sign Up</legend>
+                        <center>
+                            <div class="form-group">
+                                <label class="control-label">Name</label>
+                                <div class="inputGroupContainer">
+                                    <div class="input-group">
+                                        <input type="text" name="input1" placeholder="First &amp; last name" class="form-control" size="30">
+                                        <p id="alert1" style="color:red;"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </center>
+
+                        <center>
+                            <div class="form-group">
+                                <label class="control-label">Username</label>
+                                <div class="inputGroupContainer">
+                                    <div class="input-group">
+                                        <input type="text" name="input2" placeholder="Minimum 6 characters" class="form-control" size="30">
+                                        <p id="alert2" style="color:red;"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </center>
+
+                        <center>
+                            <div class="form-group">
+                                <label class="control-label">Password</label>
+                                <div class="inputGroupContainer">
+                                    <div class="input-group">
+                                        <input type="password" name="input3" class="form-control" size="30">
+                                        <p id="alert3" style="color:red;"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </center>
+
+                        <center>
+                            <div class="form-group">
+                                <label class="control-label">Phone number</label>
+                                <div class="inputGroupContainer">
+                                    <div class="input-group">
+                                        <input type="tel" name="input4" class="form-control" size="30">
+                                        <p id="alert4" style="color:red;"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </center>
+
+                        <!-- Success message -->
+                        <!-- <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div> -->
+
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label"></label>
+                            <div class="col-md-4">
+                                <center>
+                                    <button type="submit" value="Submit" class="btn btn-success"> Join </button>
+                                </center>
+                            </div>
+                        </div>
+                    </fieldset>
             </div>
-				<br>
-				<div class="input-group">          
-                <input type="password" name="password" placeholder="PASSWORD" class="form-control" size="30">
-					 <p id="secondalert"  style="color:red;"></p>
-            </div>
-				
-				<br>
-				
-				<center><button id = "getstarted">Sign in</button></center><br>
-			</form>
-	 
-			<!-- SIGN UP FORM STARTS HERE -->
-        <form class="well form-horizontal" action="signup.php" method="post" name="myForm" onsubmit="return validateForm()">
-            <fieldset>
-                <!-- Form Name -->
-                <legend align="center">Sign Up</legend>
-						<center><div class="form-group">
-                    <label class="control-label">Name</label>
-                    <div class="inputGroupContainer">
-                        <div class="input-group">                  
-                            <input type="text" name="input1" placeholder="FirstName LastName" class="form-control" size="30">
-									 <p id="alert1"  style="color:red;"></p>
-                        </div>
-                    </div>
-                </div></center>
-
-                <center><div class="form-group">
-                    <label class="control-label">Username</label>
-                    <div class="inputGroupContainer">
-                        <div class="input-group">          
-                            <input type="text" name="input2" placeholder="Minimum 6 characters" class="form-control" size="30">
-									 <p id="alert2"  style="color:red;"></p>
-                        </div>
-                    </div>
-                </div></center>
-					 
-					 <center><div class="form-group">
-                    <label class="control-label">Password</label>
-                    <div class="inputGroupContainer">
-                        <div class="input-group">          
-                            <input type="password" name="input3" class="form-control" size="30">
-									 <p id="alert3"  style="color:red;"></p>
-                        </div>
-                    </div>
-                </div></center>
-
-                <!-- Success message -->
-                <!-- <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div> -->
-
-                <!-- Button -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label"></label>
-                    <div class="col-md-4">
-                        <center><button type="submit" value="Submit" class="btn btn-success"> Join </button></center>
-                    </div>
-                </div>		  
-					</fieldset>
-				</div>
-			</form>		  
-		  </div>
+            </form>
+        </div>
     </header>
 
     <!-- About -->
@@ -129,12 +161,22 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h1>WinkMeUp is a fun little app that allows friends to send alarm clock (song/video) among themselves.</h1>
-						  <br><br>
-						  <center><img src="img/easy.png" style="width:780px;height:600px;"></center>
-						  <br>
-						  <h2>This will allow people to wake up to the rhythm of a music/show chosen by their friends.</h2><br>
-						  <br><br><center><img src="img/android.png" style="width:60px;height:60px;"></center><br>
-						  <p class="lead">Soon available on <!--<a target="_blank" href="http://www.google.ca/">-->Android</a>.</p>
+                    <br>
+                    <br>
+                    <center>
+                        <img src="img/easy.png" style="width:780px;height:600px;">
+                    </center>
+                    <br>
+                    <h2>This will allow people to wake up to the rhythm of a music/show chosen by their friends.</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <center>
+                        <img src="img/android.png" style="width:60px;height:60px;">
+                    </center>
+                    <br>
+                    <p class="lead">Soon available on
+                        <!--<a target="_blank" href="http://www.google.ca/">-->Android</a>.</p>
                 </div>
             </div>
             <!-- /.row -->
@@ -142,10 +184,11 @@
         <!-- /.container -->
     </section>
 
-    
+
 </body>
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet"
+    type="text/css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js"></script>
 
 <!-- JS script for sign up rules handling -->

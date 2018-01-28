@@ -42,17 +42,16 @@ button:hover, a:hover {
 </head>
 <body background="img/wall.jpg">
 
-<h2 style="text-align:center">User Profile Card</h2>
+<h1 style="text-align:center">Winky profile</h1>
 
 <div class="card">
   <img src="img/lol.jpg" alt="John" style="width:100%">
-  <h1>EL ZEN</h1>
+  <h1>EL ZEN TEAM: 500 winks</h1>
   <p class="title"></p>
-  <p style="color:white">McGill University</p>
+  <h2 style="color:black">Love rock and roll music! Get ready to wake up to some loud music!</h2>
   <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-dribbble"></i></a> 
-    <a href="#"><i class="fa fa-twitter"></i></a>  
-    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-music"></i></a> 
+    <a href="#"><i class="fa fa-instagram"></i></a>  
     <a href="#"><i class="fa fa-facebook"></i></a> 
  </div>
  <a href="index.php?user=<?php echo $_GET['user'];?>"><p><button>Go back</button></p></a>

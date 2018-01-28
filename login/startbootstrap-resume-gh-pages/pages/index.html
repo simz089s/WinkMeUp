@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>WinkMeUp</title>
+    <title>Resume - Start Bootstrap Theme</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -22,25 +22,16 @@
 
     <!-- Custom styles for this template -->
     <link href="css/resume.min.css" rel="stylesheet">
-	 <link href="css/style.css" rel="stylesheet">
 
-  </head>  
-  <body id="page-top" style="background-color:#EFF4FA">
+  </head>
 
-  
-  
-    <audio id="myAudio">
-    <source src="instrumental.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-    </audio>
-  
-  
-  
+  <body id="page-top">
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Start Bootstrap</span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/logo.png" alt="" onclick="openAlarm()">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
         </span>
       </a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -49,85 +40,96 @@
             <a class="nav-link js-scroll-trigger" href="#Profile">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#Friends">My Friends</a>
+            <a class="nav-link js-scroll-trigger" href="#Friends">Friends</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#Music">My Music</a>
+            <a class="nav-link js-scroll-trigger" href="#Music">Music</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#Alarm">Alarm setting</a>
-          </li>
-			 <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="../index.html">Logout</a>
+            <a class="nav-link js-scroll-trigger" href="#Alarm">Alarm</a>
           </li>
         </ul>
       </div>
-    </nav>
+    </nav>s
 
     <div class="container-fluid p-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Profile">
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="Profile">
         <div class="my-auto">
+          <h2 class="mb-5">Welcome</h2>
+          <h1 class="mb-0">Jean-Kevin
+            <span class="text-primary">Coutu</span>
+          </h1>
           
-			 <center>
-			 
-			 <h2 class="mb-5">Welcome <span class="text-primary"><?php echo $_GET['user'];?></span></h2>
-			 		 
-
-          <center><button type="button" class="btn btn-failure" onclick="stopAlarm()" style="background-color:#DE3C31; color:white">TURN OFF ALARM</button></center>
-
-			 <br>
-			 
-			 <canvas id="canvas" width="300" height="300" style="background-color:FFFFFF">
-			 
-			 </center>
-			 
       </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Friends">
-        <div class="my-auto">
-            <h2 class="mb-5">Your Friends</h2>
-    
-            <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                <div class="resume-content mr-auto col-md-12">
-                    
-						  
-				<div id="myDIV" class="header">
-						<input class="input2" type="text" id="myInput" placeholder="Look for friend">
-					<span onclick="newElement()" class="addBtn">Add</span>
-					
-					<a href="profile.php?user=<?php echo $_GET['user'];?>">
-					<span class="addBtn" style="background-color:#3385ff; color:white">Check profile</span>
-					</a>
-					
-				</div>
+          <div class="my-auto">
+              <h2 class="mb-5">Your Friends</h2>
+      
+              <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                  <div class="resume-content mr-auto">
+                      <div class="input-group">
+                          <h3 class="subheading mb-3 w-70">Pierre DuRocher</h3>
+                          <span class="input-group-btn">
+                              <button type="button" class="btn btn-danger">Delete</button>
+                          </span>
+                      </div>
+                      <div class="input-group">
+                          <h3 class="subheading mb-3 w-70">Marguerite Lafleur</h3>
+                          <span class="input-group-btn">
+                              <button type="button" class="btn btn-danger">Delete</button>
+                          </span>
+                      </div>
+                      <div class="input-group">
+                          <h3 class="subheading mb-3 w-70">Ivan Ivanovitch</h3>
+                          <span class="input-group-btn">
+                              <button type="button" class="btn btn-danger">Delete</button>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+          </div>
 
-				<ul id="myUL">
-				</ul>
-	  
-               </div>
-				</div>
-			</div>
-		</section>
+         <div class="input-group input-group-newsletter">
+            <input type="email" class="form-control" placeholder="look for friend" aria-label="Look" aria-describedby="basic-addon">
+            <div class="input-group-append">
+                <button type="button" class="btn btn-success">add</button>
+            </div>
+
+      </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Music">
         <div class="my-auto">
-          <h2 class="mb-5">My Music</h2>
-			 
-			 	<div class="input-group-append">
+          <h2 class="mb-5">Music</h2>
+          <h3 class="mb-5">PomPom</h3>
+          <button type="button" id="button_fbw" class="btn" onclick='buttonRewindPress()'>
+              <i class="fa fa-fast-backward"></i>
+            </button>
+            
+            <button type="button" id="button_bw" class="btn" onclick='buttonBackPress()'>
+              <i class="fa fa-backward"></i>
+            </button>
+            
+            <button type="button" id="button_play" class="btn" onclick='buttonPlayPress()'>
+              <i class="fa fa-play"></i>
+            </button>
+            
+            <button type="button" id="button_stop" class="btn" onclick='buttonStopPress()'>
+              <i class="fa fa-stop"></i>
+            </button>
+            
+            <button type="button" id="button_fw" class="btn" onclick='buttonForwardPress()'>
+              <i class="fa fa-forward"></i>
+            </button>
+            
+            <button type="button" id="button_ffw" class="btn" onclick='buttonFastforwardPress()'>
+              <i class="fa fa-fast-forward"></i>
+            </button>    
+          </div>
+          <div class="input-group-append">
                 <button type="button" class="btn btn-success">+ Add Music...</button>
             </div>
-				
-				<br>
-			 
-			 <h3 class="mb-5">PomPom</h3>
-			 
-				  <div>
-              <audio controls>
-                  <source src="ponpon.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-                </audio>
-              </div>
           
 
         </div>
@@ -135,35 +137,103 @@
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Alarm">
         <div class="my-auto">
-		  
-			 <center><div class="div2">
-			 <h2 class="mb-5"> CURRENT SETTINGS</h2>
-			 </div></center><br>
-			 
-			 <center><h3> Receiving alarm from <font color="E86E1F" id="displayedname">Marguerite Fleury</font> </h3></center>
-			 <center><h1 id="displayedtime"> 8:00 AM </h1></center>
-			 
-			 <br>
-			 
-			 <center><div class="div1">
-			 <h2 class="mb-5" style="color:CC3636"> CHANGE SETTINGS</h2>
-			 </div></center>
-				<center>
-				<h1 class="fa fa-child fa-fw"></h1>
-				<h4>[Waker's name] Enter your friend's name:</h4>
-				<input class="" type="text" name="uname" id="friendname"><br>
-				<center><br>
-				<h1 class="fa fa-bell fa-fw"></h1>
-				<h4>[Alarm time] wake me up at:</h4>
-				<input type="time" name="usr_time" id="usertime">
-				<br><br>
-				<center><button type="button" class="btn btn-success" onclick="changeit()">SET ALARM</button></center><br>
-				<b><p id="myalert"  style="color:red; visibility:hidden">Error message here</p></b></center>
-				
-				<center>
-                <button type="button" class="btn btn-failure" style="background-color:#DE3C31; color:white">ALARM OFF</button>
-            </center>
-			 
+          <h2 class="mb-5">Skills</h2>
+
+          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+          <ul class="list-inline list-icons">
+            <li class="list-inline-item">
+              <i class="devicons devicons-html5"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-css3"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-javascript"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-jquery"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-sass"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-less"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-bootstrap"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-wordpress"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-grunt"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-gulp"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-npm"></i>
+            </li>
+          </ul>
+
+          <div class="subheading mb-3">Workflow</div>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Mobile-First, Responsive Design</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Cross Browser Testing &amp; Debugging</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Cross Functional Teams</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Agile Development &amp; Scrum</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+        <div class="my-auto">
+          <h2 class="mb-5">Interests</h2>
+          <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skiier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technolgy advancements in the front-end web development world.</p>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+        <div class="my-auto">
+          <h2 class="mb-5">Awards &amp; Certifications</h2>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              Google Analytics Certified Developer</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              Mobile Web Specialist - Google Certification</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup>
+              Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup>
+              Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              2<sup>nd</sup>
+              Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
+            <li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup>
+              Place - James Buchanan High School - Hackathon 2006</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              3<sup>rd</sup>
+              Place - James Buchanan High School - Hackathon 2005</li>
+          </ul>
         </div>
       </section>
 
@@ -178,117 +248,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/resume.min.js"></script>
-	 <script src="js/script.js"></script>
 
-	 <script>
-	 
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByClassName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    //ev.target.classList.toggle('checked');
-	 
-	 document.getElementById("myInput").innerHTML = "LOOOL"
-	 
-  }
-}, false);
-
-
-var friendarr = []; // jz
-
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-  var li = document.createElement("li");
-  
-
-  
-  var inputValue = document.getElementById("myInput").value;
-  friendarr.push(inputValue);
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-	  
-    document.getElementById("myUL").appendChild(li);
-	 
-
-  }
-  document.getElementById("myInput").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-}
-
-function changeit() {
-	  var usertime = document.getElementById("usertime").value;
-	  var friendname = document.getElementById("friendname").value;
-	  if (usertime == ""){
-		  var errormsg = document.getElementById("myalert");
-		  errormsg.style.visibility = "visible" ;
-		  errormsg.innerHTML = "Missing alarm time";
-	  }
-	  else{
-		  if (friendname != "" && friendarr.indexOf(friendname) != -1){
-			document.getElementById("displayedname").innerHTML = friendname;
-			document.getElementById("displayedtime").innerHTML = usertime;
-		  }
-		  else{
-			  	var errormsg = document.getElementById("myalert");
-				errormsg.style.visibility = "visible" ;
-				errormsg.innerHTML = "Friend does not exist";
-		  }
-	  }
-}
-
-function openAlarm(){
-	var x = document.getElementById("myAudio"); 
-	x.play(); 
-
-}
-
-function stopAlarm(){
-	var x = document.getElementById("myAudio"); 
-	x.pause(); 
-
-}
-
-</script>
-	 
-	 
   </body>
 
-  
-  
 </html>

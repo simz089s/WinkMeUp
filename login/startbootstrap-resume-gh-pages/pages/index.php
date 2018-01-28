@@ -72,13 +72,16 @@
 			 <center>
 			 
 			 <h2 class="mb-5">Welcome <span class="text-primary"><?php echo $_GET['user'];?></span></h2>
-			 		 
-
+			
           <center><button type="button" class="btn btn-failure" onclick="stopAlarm()" style="background-color:#DE3C31; color:white">TURN OFF ALARM</button></center>
 
+			  <br><img src="img/thumbs.png" width="100" height="100" onclick="like()"><br>
+			  
+			  <b><p id="mywink"  style="color:#001433; visibility:hidden">Error message here</p></b></center><br>
+			 
 			 <br>
 			 
-			 <canvas id="canvas" width="300" height="300" style="background-color:FFFFFF">
+			 <center><canvas id="canvas" width="300" height="300" style="background-color:FFFFFF"></center>
 			 
 			 </center>
 			 
@@ -249,6 +252,12 @@ function newElement() {
       div.style.display = "none";
     }
   }
+}
+
+function like() {
+			  	var msg = document.getElementById("mywink");
+				msg.style.visibility = "visible" ;
+				msg.innerHTML = "You just gave your friend a wink";
 }
 
 function changeit() {

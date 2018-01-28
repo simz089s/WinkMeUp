@@ -1,0 +1,74 @@
+        body {
+            background-image: url("biglecture.png");
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: #bbb;
+            background-repeat: no-repeat;
+            min-height: 100%;
+            background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -webkit-background-size: cover;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .nav {
+            display: block;
+            margin: 0 auto;
+            clear: both;
+            text-align: center;
+        }
+        .nav ul {
+            list-style-type: none;
+        }
+        .nav li a{
+            /*float: center;*/
+            display: inline-block;
+            margin: 10px;
+            border: 3px solid #FFFFFF;
+            padding: 20px;
+            text-decoration: none;
+            color: white;
+            border-radius: 15px;
+        }
+        .nav li a:hover{
+            background-color: rgba(255,255,255,0.5);
+        }
+        .container_splash {
+            display: block;
+            max-width: fill;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: rgba(220,240,240,0.9);
+            color: #0093ff;
+            border-style: solid;
+            border-color: #0093FF;
+            border-width: 2px;
+            border-radius: 15px;
+            clear: both;
+        }
+        .container_splash h1 {
+            font-weight:lighter;
+            font-size: 40px;
+            text-align: center;
+        }
+        .container_splash li {
+            margin-bottom: 8px;
+        }
+        button {
+            display: block;
+            background-color: rgba(255,255,255, 0.3);
+            border-style: solid;
+            border-color: #0093FF;
+            color: #0093ff;
+            border-radius: 15px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 25px;
+            padding: 10px;
+        }
+        button:hover {
+            background-color: rgba(255,255,255, 0.8)
+        }
+        button:active {
+            background-color: white;
+        }
